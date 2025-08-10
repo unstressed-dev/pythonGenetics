@@ -37,7 +37,6 @@ def reverseTranscribe(nucleicAcid):
    return nucleicAcid
    
 # Main Section
-strikes = 0
 print("Welcome to the Basic Genetics Program, sourced in Python!")
 while True:
    print("What would you like to do?")
@@ -67,7 +66,7 @@ while True:
             sys.exit()
    if choice == 0:
       # Info
-      pass
+      print("This project aims to explore the basic Nucleic Acid operations found in cells.\n As of right now, the Translation Feature is not Accessible.")
    elif choice == 1:
       # Complement of Sequence
       print("Finding Complement of a Nucleic Acid")
