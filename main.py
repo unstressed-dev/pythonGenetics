@@ -14,9 +14,9 @@ def verifyInput(nucleicAcid, isDNA):
    return passed
 
 # Finds the complement of a Nucleic Acid Sequence, makes string uppercase
+DNAtable = str.maketrans({"A":"T","T":"A","C":"G","G":"C"})
+RNAtable = str.maketrans({"A":"U","U":"A","C":"G","G":"C"})
 def findComplement(nucleicAcid, isDNA):
-   DNAtable = str.maketrans({"A":"T","T":"A","C":"G","G":"C"})
-   RNAtable = str.maketrans({"A":"U","U":"A","C":"G","G":"C"})
    nucleicAcid = nucleicAcid.upper()
    if isDNA:
       nucleicAcid = nucleicAcid.translate(DNAtable)
@@ -31,8 +31,8 @@ def transcribe(DNA):
    return mRNA
 
 # Reverse mRNA
+reverseTranscription = str.maketrans({"A":"T", "U":"A", "C":"G", "G":"C"})
 def reverseTranscribe(nucleicAcid):
-   reverseTranscription = str.maketrans({"A":"T", "U":"A", "C":"G", "G":"C"})
    nucleicAcid = nucleicAcid.translate(reverseTranscription)
    return nucleicAcid
    
@@ -116,7 +116,8 @@ while True:
             print("Invalid Input, try Again. Press Q to go back.")
    elif choice == 3:
       # Translate a mRNA Sequence
-      pass
+      # Under Development... Coming Soon
+      print("Translation is Coming Soon...")
    elif choice == 4:
       # Reverse Transcribe a mRNA Sequence
       print("Reverse Transcibe a mRNA Sequence")
