@@ -75,14 +75,14 @@ while True:
       print("1. DNA")
       print("2. RNA")
       while True:
-         choice = input()
-         if choice.upper() == "Q":
-            print("Exiting Program")
+         choice = input().upper()
+         if choice == "Q":
+            break
          try:
             choice = int(choice)
             break
          except:
-            print("Invalid Input, try Again. Press Q to exit program.")
+            print("Invalid Input, try Again. Press Q to go back.")
          if choice == 1:
             choice = True
             break
